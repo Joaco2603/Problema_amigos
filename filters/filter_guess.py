@@ -26,6 +26,7 @@ def seek_guess_friends():
     for guess in guess_names:
         if guess in friends:
             print(guess);
+            guests_of_my_guests.append(guess);
     
     # if friends[0].find("Ca") != -1:
     #     print("No");
