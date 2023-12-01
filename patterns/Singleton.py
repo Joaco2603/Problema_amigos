@@ -14,6 +14,7 @@ class Singleton:
             
 class Resultado_amigos:
     def __init__(self):
+        self.data = [];
         self.guests_of_my_guests = [];
     
     

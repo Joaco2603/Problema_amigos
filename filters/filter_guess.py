@@ -8,6 +8,7 @@ guess_names =[];
 
 
 def filter_guess(guess):
+    singleton_resultado.objeto.data = guess;
     for data in guess:
          friends_cache.append(data.friends.name);
          guess_names.append(data.name);
@@ -25,11 +26,9 @@ def union_friends():
     
 
 def seek_guess_friends():
-    print(guess_names);
-    for guess in guess_names:
+    for index, guess in enumerate(guess_names):
         if guess in friends:
             singleton_resultado.objeto.guests_of_my_guests.append(guess);
-            guess_names.remove(guess)
-            print(guess_names)
-            print(singleton_resultado.objeto.guests_of_my_guests)
+            del singleton_resultado.objeto.data[index]
+
             
